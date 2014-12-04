@@ -7,23 +7,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Phoenix!</title>
+    <title>Gluten-Free Hyperdrives</title>
     <link rel="stylesheet" href="/css/phoenix.css">
   </head>
 
   <body>
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="https://github.com/phoenixframework/phoenix">Get Started</a></li>
-        </ul>
-        <span class="logo"></span>
-      </div>
+      <p class="lead"><a href="/" class="brand">Home</a></p>
+    </div>
+
+    <div class="container">
 
       <%= @inner %>
 
       <div class="footer">
-        <p><a href="http://phoenixframework.org">phoenixframework.org</a></p>
+        <p>© 2014 <a href="https://spreedly.com">Spreedly</a> Corporation.  All rights reserved.</p>
       </div>
 
     </div> <!-- /container -->

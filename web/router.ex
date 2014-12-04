@@ -6,18 +6,11 @@ defmodule Hyperdrives.Router do
     plug :fetch_session
   end
 
-  pipeline :api do
-    plug :accepts, ~w(json)
-  end
-
   scope "/", Hyperdrives do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
+    get "/buy", DriveController, :show
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Hyperdrives do
-  #   pipe_through :api
-  # end
 end
