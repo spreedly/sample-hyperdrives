@@ -4,4 +4,30 @@
     <small>Only $44.  And it's gluten-free.</small>
   </h2>
 
+  <script src="https://core.spreedly.com/payment-frame/paymentFrame-0.1.0.min.js"></script>
+
+  <form accept-charset="UTF-8" action="/orders" id="payment-form" method="POST" onsubmit="spreedlyPaymentFrame.submit(); return false;">
+
+    <input type="hidden" name="payment_method_token" id="payment_method_token" value="" />
+
+    <label for="first_name">First name</label>
+    <input type="text" name="first_name" /><br/>
+
+    <label for="last_name">Last name</label>
+    <input type="text" name="last_name" />
+
+    <div id='frame-holder' style="width: 500px; height: 100px;">
+      <iframe id="spreedly-iframe"
+        src="https://core.spreedly.com/v1/embedded/payment_frame.html?environment_key=8rLAE4vizuIQyA0zorQHIMrluuM"
+        frameborder="0" width="100%" height="100%" scrolling="no">
+      </iframe>
+    </div>
+
+    <button type='submit'>Submit Payment</button>
+  </form>
 </div>
+
+<br/>
+
+<script src="/js/payment_form.js"></script>
+
