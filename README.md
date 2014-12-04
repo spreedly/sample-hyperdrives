@@ -1,8 +1,7 @@
-# Hyperdrives
 
-To start your new Phoenix application:
+sample-hyperdrives
+==============
 
-1. Install dependencies with `mix deps.get`
-2. Start Phoenix router with `mix phoenix.start`
+This is the start of a sample application designed to demonstrate how to use [Spreedly](https://spreedly.com) with an iFrame.
 
-Now you can visit `localhost:4000` from your browser.
+
