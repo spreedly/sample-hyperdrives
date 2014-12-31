@@ -10,6 +10,24 @@ function submitPaymentForm() {
   spreedlyPaymentFrame.submit();
 }
 
+function errorList(array) {
+  var list = document.createElement('ul');
+  for(var i = 0; i < array.length; i++) {
+    var item = document.createElement('li');
+    item.appendChild(document.createTextNode(array[i]["message"]));
+    list.appendChild(item);
+  }
+  return list;
+}
+
+function fillErrorsDiv(errors) {
+  var errorsDiv = document.getElementById("errors");
+  while (errorsDiv.firstChild) {
+    errorsDiv.removeChild(errorsDiv.firstChild);
+  }
+  errorsDiv.appendChild(errorList(errors));
+}
+
 spreedlyPaymentFrame.on('paymentMethod', function(token, pmData) {
   var tokenField = document.getElementById("payment_method_token");
   tokenField.setAttribute("value", token);
@@ -18,13 +36,7 @@ spreedlyPaymentFrame.on('paymentMethod', function(token, pmData) {
 });
 
 spreedlyPaymentFrame.on('errors', function(errors) {
-  console.log(errors);
-  for(var i = 0; i < errors.length; i++) {
-    var error = errors[i];
-    if(error["attribute"]) {
-      spreedlyPaymentFrame.setStyle('input#spf-' + error["attribute"], "border: 1px solid red;");
-    }
-  }
+  fillErrorsDiv(errors);
 });
 
 spreedlyPaymentFrame.bind(document.getElementById('spreedly-iframe'));
