@@ -1,12 +1,14 @@
-<div class="jumbotron">
-  <h2>Gluten Free Hyperdrives</h2>
-  <p class="lead">Made in factories without a trace of gluten.</p>
-</div>
+<div class="container">
+  <div class="page-header">
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <p class="lead"><a href="/orders/new">Buy a hyperdrive</a></p>
+    <h1>Gluten Free Hyperdrives</h1>
+    <h2>
+      <small>Made in factories without a trace of gluten.</small>
+    </h2>
   </div>
 
+  <p class="lead"><a href="/orders/new">Buy a Drive</a></p>
 </div>
+
+
 

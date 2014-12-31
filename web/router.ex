@@ -10,6 +10,7 @@ defmodule Hyperdrives.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/about", PageController, :about
     get "/orders/new", OrderController, :new
     post "/orders", OrderController, :create
   end

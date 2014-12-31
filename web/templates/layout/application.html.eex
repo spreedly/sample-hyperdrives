@@ -14,26 +14,36 @@
   </head>
 
   <body>
-    <div class="container">
-      <p class="lead"><a href="/" class="brand">Home</a></p>
-    </div>
-
-    <div class="container">
-
-      <%= for notice <- Flash.get_all(@conn, :notice) do %>
-        <div class="container">
-          <div class="row">
-            <p><%= notice %></p>
-          </div>
-        </div>
-      <% end %>
-
-      <%= @inner %>
-
-      <div class="footer">
-        <p>© 2014 <a href="https://spreedly.com">Spreedly</a> Corporation.  All rights reserved.</p>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <a href="/" class="navbar-brand">Home</a>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/orders/new" class="brand">Buy a Drive</a>
+          </li>
+          <li>
+            <a href="/about" class="brand">About</a>
+          </li>
+        </ul>
       </div>
+    </nav>
 
-    </div> <!-- /container -->
+    <%= for notice <- Flash.get_all(@conn, :notice) do %>
+      <div class="container">
+        <div class="row">
+          <p><%= notice %></p>
+        </div>
+      </div>
+    <% end %>
+
+    </br>
+    <%= @inner %>
+
+    <div class="container">
+      <hr/>
+      <footer>
+        <p>© 2014 <a href="https://spreedly.com">Spreedly</a> Corporation.  All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>

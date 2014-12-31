@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="page-header">
+    <h1>About</h1>
+  </div>
+
+  <p>
+    This is a sample application designed to demonstrate how to use <a href="https://spreedly.com">Spreedly</a> to collect a credit card
+    using an iFrame and charge against it.
+  </p>
+
+  <p>
+    It's all <a href="https://github.com/spreedly/sample-hyperdrives">open source and on Github</a> for you to use.  We also have a number of <a href="https://docs.spreedly.com/resources/apps-libs/">other sample applications</a> you might find useful.
+  </p>
+
+  <br/>
+  <br/>
+
+</div>
