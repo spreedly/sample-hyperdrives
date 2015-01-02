@@ -39,4 +39,13 @@ spreedlyPaymentFrame.on('errors', function(errors) {
   fillErrorsDiv(errors);
 });
 
+spreedlyPaymentFrame.on('config', function(frame) {
+  frame.setStyle('body', 'margin: 0px;');
+  frame.setStyle('input', 'line-height: 20px;');
+  frame.setStyle('.spf-field.spf-number', 'float: left; display: inline-block; margin-right: 1%');
+  frame.setStyle('.spf-field.spf-verification_value', 'float: left; display: inline-block; margin-right: 1%;');
+  frame.setStyle('label', 'display: block; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 14px; margin-bottom: 0.25em; margin-top: 0.8em;');
+  frame.setText('label[for="spf-number"]', 'Card Number');
+});
+
 spreedlyPaymentFrame.bind(document.getElementById('spreedly-iframe'));

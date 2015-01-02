@@ -1,0 +1,5 @@
+<%= for notice <- Flash.get_all(@conn, :notice) do %>
+  <div class="alert alert-info">
+    <%= notice %>
+  </div>
+<% end %>

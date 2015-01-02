@@ -8,7 +8,8 @@
     <meta name="author" content="">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/css/phoenix.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/application.css">
 
     <title>Gluten-Free Hyperdrives</title>
   </head>
@@ -30,14 +31,6 @@
 
     </br>
     </br>
-
-    <%= for notice <- Flash.get_all(@conn, :notice) do %>
-      <div class="container">
-        <div class="row">
-          <p><%= notice %></p>
-        </div>
-      </div>
-    <% end %>
 
     <%= @inner %>
 
