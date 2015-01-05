@@ -39,6 +39,10 @@ spreedlyPaymentFrame.on('errors', function(errors) {
   fillErrorsDiv(errors);
 });
 
+spreedlyPaymentFrame.on('ready', function() {
+  document.getElementById("frame-holder").style.visibility = 'visible';
+});
+
 spreedlyPaymentFrame.on('config', function(frame) {
   frame.setStyle('body', 'margin: 0px;');
   frame.setStyle('input', 'line-height: 20px;');
