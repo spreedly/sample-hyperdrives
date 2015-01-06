@@ -7,6 +7,8 @@
     </h2>
   </div>
 
+  <%= render Hyperdrives.OrderView, "_flash.html", conn: @conn %>
+
   <p class="lead"><a href="/orders/new">Buy a Drive</a></p>
 </div>
 

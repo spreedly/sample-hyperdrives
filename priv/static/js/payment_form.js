@@ -1,5 +1,5 @@
 
-var spreedlyPaymentFrame = new Spreedly.PaymentFrame("8rLAE4vizuIQyA0zorQHIMrluuM");
+var spreedlyPaymentFrame = new Spreedly.PaymentFrame(spreedlyEnvironmentKey);
 
 function submitPaymentForm() {
   var paymentMethodFields = ['full_name', 'month', 'year']

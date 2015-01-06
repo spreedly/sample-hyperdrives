@@ -9,7 +9,7 @@ defmodule Hyperdrives.Router do
   scope "/", Hyperdrives do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", PageController, :index, as: :home
     get "/about", PageController, :about
     get "/orders/new", OrderController, :new
     post "/orders", OrderController, :create
