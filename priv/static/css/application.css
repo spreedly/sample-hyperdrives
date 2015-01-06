@@ -3,3 +3,8 @@ label {
   overflow: hidden;
   font-weight: normal;
 }
+
+input.full_name {
+  width: 12em;
+}
+
