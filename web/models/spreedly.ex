@@ -36,7 +36,7 @@ defmodule Spreedly do
   end
 
   defp retrieve_message(xml) do
-    retrieve(xml, "//transaction/message")
+    retrieve(xml, "//transaction/message") || retrieve(xml, "//errors/error")
   end
 
   defp retrieve(xml, xpath) do

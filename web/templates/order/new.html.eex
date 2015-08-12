@@ -1,4 +1,4 @@
-<script src="https://core.spreedly.com/payment-frame/payment-frame-0.2.0.min.js"></script>
+<script src="https://core.spreedly.com/payment-frame/payment-frame-0.5.min.js"></script>
 
 <div class="container">
   <div class="page-header">

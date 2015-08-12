@@ -7,7 +7,7 @@ function submitPaymentForm() {
     var field = paymentMethodFields[i];
     spreedlyPaymentFrame.setParam(field, document.getElementById(field).value)
   }
-  spreedlyPaymentFrame.submit();
+  spreedlyPaymentFrame.validate();
 }
 
 function errorList(array) {
@@ -33,6 +33,15 @@ spreedlyPaymentFrame.on('paymentMethod', function(token, pmData) {
   tokenField.setAttribute("value", token);
   var masterForm = document.getElementById('payment-form');
   masterForm.submit();
+});
+
+spreedlyPaymentFrame.on('validation', function(inputProperties) {
+  if (inputProperties["verificationValueLength"] < 3) {
+    spreedlyPaymentFrame.setStyle('#spf-verification_value', 'background-color : #FF0000;');
+  } else {
+    spreedlyPaymentFrame.setStyle('#spf-verification_value', 'background-color : #FFFFFF;');
+    spreedlyPaymentFrame.submit();
+  }
 });
 
 spreedlyPaymentFrame.on('errors', function(errors) {
