@@ -22,7 +22,6 @@ defmodule Hyperdrives.OrderController do
   end
 
   defp handle_response({:error, message, payment_method}, conn) do
-    IO.inspect message
     conn
     |> Flash.put(:error, message)
     |> assign(:payment_method, payment_method)
